@@ -1,0 +1,14 @@
+prompt = 'Enter the amount of the check: $ ';
+tip = input(prompt);
+a = (tip*0.10);
+b = (tip*0.15);
+c = (tip*0.20);
+a1 = (tip + a);
+b1 = (tip + b);
+c1 = (tip + c);
+x = sprintf('For 10%% tip $%.2f for a total of $%.2f', a, a1);
+y = sprintf('For 15%% tip $%.2f for a total of $%.2f', b, b1);
+z = sprintf('For 20%% tip $%.2f for a total of $%.2f', c, c1);
+disp(x);
+disp(y);
+disp(z);
