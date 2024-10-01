@@ -6,3 +6,5 @@ These are all the projects I completed at Arizona State University, primarily co
 - Project Spyn
 
 - Effort Logger
+
+- DataTriad
