@@ -1,0 +1,75 @@
+.myContainer {
+    margin:auto;
+    width:1210px;
+}
+#treemap_div, #sankey_div {
+    float:left;
+    width:600px;
+    padding:10px;
+}
+#sankey_div {
+    float:right;
+}
+svg {
+    width: 580px;
+    height:400px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+#treemap_svg rect, #sankey_svg rect {
+    stroke: black;
+    stroke-width: 1px;
+}
+#treemap_svg rect:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    transition: all 0.25s ease;
+}
+#sankey_svg .node rect {
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+}
+
+#sankey_svg .node text {
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff;
+}
+
+#sankey_svg .link {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .2;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    /* width: 130px; */
+    height: auto;
+    padding: 8px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.blink {
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    25% {
+        -webkit-filter: brightness(0.7);
+        filter: brightness(0.7);
+    }
+    50% {
+        -webkit-filter: brightness(0.5);
+        filter: brightness(0.5);
+    }
+    75% {
+        -webkit-filter: brightness(0.7);
+        filter: brightness(0.7);
+    }
+}

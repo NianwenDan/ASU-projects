@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #4: Custom Visualization Design - CSE 578 - Fall 2024</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="ndan1.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 control-center">
+                <h5>Homework #4: Custom Visualization Design</h5>
+                <p>CSE 578 - Fall 2024</p>
+                <p>Nianwen Dan</p>
+                <hr>
+                <label for="attr-dropdown">Attribute:</label>
+                <select class="form-control" id="attr-dropdown">
+                    <option value=""></option>
+                    <option value="tempmax">Avg. Max Temperature</option>
+                    <option value="tempmin">Avg. Min Temperature</option>
+                    <option value="temp">Avg. Temperature</option>
+                    <option value="feelslike">Avg. Feeling Temperature</option>
+                    <option value="humidity">Avg. Max Humidity</option>
+                    <option value="windspeed">Avg. Wind Speed</option>
+                </select>
+                <div class="row">
+                    <div class="col">
+                        <label for="plotDomainMin">Plot Domain (Min)</label>
+                        <input type="text" class="form-control" id="plotDomainMin" disabled>
+                    </div>
+                    <div class="col">
+                        <label for="plotDomainMax">Plot Domain (Max)</label>
+                        <input type="text" class="form-control" id="plotDomainMax" disabled>
+                    </div>
+                </div>
+                <div id="year-checkBox">
+                    <div>Years To Shown</div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="2016" id="year-2016-checkbox">
+                        <label class="form-check-label" for="year-2016-checkbox">2016</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="2017" id="year-2017-checkbox">
+                        <label class="form-check-label" for="year-2017-checkbox">2017</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="2018" id="year-2018-checkbox" checked>
+                        <label class="form-check-label" for="year-2018-checkbox">2018</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="2019" id="year-2019-checkbox" checked>
+                        <label class="form-check-label" for="year-2019-checkbox">2019</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="2020" id="year-2020-checkbox" checked>
+                        <label class="form-check-label" for="year-2020-checkbox">2020</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="2021" id="year-2021-checkbox">
+                        <label class="form-check-label" for="year-2021-checkbox">2021</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="2022" id="year-2022-checkbox">
+                        <label class="form-check-label" for="year-2022-checkbox">2022</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="2023" id="year-2023-checkbox">
+                        <label class="form-check-label" for="year-2023-checkbox">2023</label>
+                    </div>
+                </div>
+                <p></p>
+                <button type="button" class="btn btn-outline-primary" id="updateBtn" disabled>Update</button>
+                <hr>
+                <p>
+                    <u>Introduction:</u>
+                    This radial chart visualizes the monthly average of various weather attributes in Washington, D.C., across selected years. Each line on the chart represents the average value for each month, calculated from daily data points, allowing users to easily identify seasonal patterns and compare year-over-year trends. Users can choose from attributes such as average minimum temperature, wind speed, and humidity, and adjust the radial domain/range for more focused analysis.
+                </p>
+                <p>
+                    <u>Category:</u> Combinatorial
+                </p>
+                <p>
+                    <u>Marks:</u> Each line represents the monthly average of the selected attribute, with each point along the line showing the average for a specific month. This emphasizes seasonal trends while reducing the noise of daily fluctuations.
+                </p>
+                <p>
+                    <u>Channels:</u> Different colors distinguish each year, enabling quick visual comparisons of monthly averages across years.
+                </p>
+                <p>
+                    <u>Interactions:</u> Users can select the attribute to visualize, adjust the domain/range of the chart, and choose specific years for comparison, allowing for an in-depth, customized view of weather trends.
+                </p>
+                
+            </div>
+
+            <div class="col-md-9 svg-container">
+                <svg id="radioChart"></svg>
+            </div>
+        </div>
+    </div>
+    <script src="ndan1.js"></script>
+</body>
+
+</html>

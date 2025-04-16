@@ -1,0 +1,33 @@
+#myDataVis svg {
+    width: 1000px;
+    height: 600px;
+
+    /* border: 1px solid black;
+    border-radius: 5px; */
+    margin: 30px auto;
+    display: block;
+}
+
+#myDataVis svg .line-male {
+    stroke: red;
+}
+
+#myDataVis svg .circle-male {
+    fill: red;
+}
+
+#myDataVis svg .line-female {
+    stroke: #69b3a2;
+}
+
+#myDataVis svg .circle-female {
+    fill: #69b3a2;
+}
+
+#country-selecter {
+    width: 100%;
+}
+
+#myDataVis .legends {
+    background-color: white;
+}

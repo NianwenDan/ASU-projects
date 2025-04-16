@@ -1,0 +1,27 @@
+.myContainer {
+    margin:auto;
+    width:1210px;
+}
+.plot {
+    /* padding: 10px; */
+    margin: 10px;
+    margin-top: 0;
+}
+
+#control {
+    width:1210px;
+    height: 120px;
+    padding:10px;
+    margin:10px;
+    margin-bottom: 30px;
+}
+svg {
+    width: 1210px;
+    height:500px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+.colorkey:hover {
+    opacity: 0.1;
+}

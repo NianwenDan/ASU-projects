@@ -1,0 +1,28 @@
+.myContainer {
+    margin:auto;
+    width:1210px;
+}
+#immigration_div, #unemployment_div {
+    float:left;
+    width:600px;
+    padding:10px;
+}
+#unemployment_div {
+    float:right;
+}
+svg {
+    width: 580px;
+    height:400px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+/* #immigration_svg rect, #unemployment_svg rect {
+    stroke: black;
+    stroke-width: 1px;
+}
+#immigration_svg rect:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    transition: all 0.25s ease;
+} */
