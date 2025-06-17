@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Phishy",
+  "version": "1.0",
+  "description": "Find out if the site you're visiting is a phishing site 🎣",
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "offscreen"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/phishy-16.png",
+      "48": "icons/phishy-48.png",
+      "128": "icons/phishy-128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/settings/settings.html",
+        "settings.js",
+        "chunks/*",
+        "models/*",
+        "ort/*",
+        "sandbox/*",
+        "src/blocked/blocked.html",
+        "blocked.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "sandbox": {
+    "pages": ["sandbox/sandbox.html"]
+  }
+}

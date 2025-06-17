@@ -1,0 +1,118 @@
+/*@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono|Montserrat:700");*/
+
+@font-face {
+    font-family: 'Share Tech Mono';
+    src: url('/fonts/ShareTechMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main div.terminal {
+    background: rgba(0, 0, 0, 0);
+    max-width: 1000px;
+    padding: 30px 30px 10px;
+    box-shadow: 0 0 150px -20px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+main div p {
+    font-family: "Share Tech Mono", monospace;
+    color: #f5f5f5;
+    margin: 0 0 10px;
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+span.oragne-color {
+    color: #f0c674;
+}
+
+span.cyan-blue-color {
+    color: #8abeb7;
+}
+
+span.red-color {
+    color: #ef2929;
+}
+
+span.green-color {
+    color: green;
+}
+
+.options {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); */
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.options button {
+    background-color: #444;
+    border: 1px solid transparent;
+    padding: 3px;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 17px;
+    color: #f5f5f5;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.options button:hover {
+    border: 1px solid white;
+}
+
+.options button.selected {
+    background-color: #fff;
+    color: black;
+}
+
+.terminal {
+    border-top: 25px solid #fff;
+    /* thick top */
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    font-family: monospace;
+}
