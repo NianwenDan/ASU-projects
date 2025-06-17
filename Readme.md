@@ -6,6 +6,8 @@ These are all the projects I completed at Arizona State University, primarily co
 
 ### Under Current Repository
 
+- **Apple-Swift** (CSE 335 Princ of Mobile App Dev, *Spring 2024* with Dr. [Janaka Balasooriya](https://search.asu.edu/profile/1097689))
+  
 - **DataTriad** (CSE 412 Database Management, *Spring 2024* with Dr. [Hasan Davulcu](https://search.asu.edu/profile/515694))
   - **Description:** Utilized database design concepts to design a relational database and create an ER diagram.
 
@@ -21,7 +23,7 @@ These are all the projects I completed at Arizona State University, primarily co
 
 ### NOT Under Current Repository
 
-- TreePOD (CSE 578 Data Visualization, *Fall 2024* with Dr. [Chris Bryan](https://chrisbryan.github.io/))
+- **TreePOD** (CSE 578 Data Visualization, *Fall 2024* with Dr. [Chris Bryan](https://chrisbryan.github.io/))
   - **Description:** TreePOD is a tool that enables users to explore and select decision trees by balancing accuracy and interpretability through intuitive visualizations and sensitivity-aware insights.
   - **Link:** [github.com/NianwenDan/TreePOD](https://github.com/NianwenDan/TreePOD)
 
